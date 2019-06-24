@@ -1,0 +1,5 @@
+# Ignore everything related to the PyCharm editor
+.idea
+
+# Ignore everything related to MAC OS
+**/.DS_Store
