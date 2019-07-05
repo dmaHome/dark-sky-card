@@ -161,8 +161,8 @@ class DarkSkyCard extends LitElement {
                        ${Math.round(this.hass.states[windSpeedSensor].state*3.6)}
                        </span>
                        <span class="unit"> ${this.getUnit('length')}/h</span>
-                       <span id="wind-bearing-text"> (${windBearing})</span>
-                       <span class="wind-beaufort" id="wind-beaufort-text"> - Force ${this.beaufortWind.force}</span></li>`
+                       <span id="wind-bearing-text"> (${windBearing}) </span>
+                       <span class="wind-beaufort" id="wind-beaufort-text">Force ${this.beaufortWind.force}</span></li>`
                 : ""
               }
               ${visibilitySensor in this.hass.states
@@ -585,7 +585,7 @@ class DarkSkyCard extends LitElement {
     var currentTextTopMargin = this._config.current_text_top_margin || "39px";
     var currentTextLeftPos = this._config.current_text_left_pos || "5em";
     var currentTextFontSize = this._config.current_text_font_size || "1.5em";
-    var currentSummaryTopMargin = this._config.current_summary_top_margin || "60px";
+    var currentSummaryTopMargin = this._config.current_summary_top_margin || "80px";
     var largeIconTopMargin = this._config.large_icon_top_margin || "-3.5em";
     var largeIconLeftPos = this._config.large_icon_left_pos || "0em";
     var currentDataTopMargin = this._config.current_data_top_margin ? this._config.current_data_top_margin : this._config.show_separator ? "1em" : "7em";
@@ -651,6 +651,7 @@ class DarkSkyCard extends LitElement {
         position: absolute;
         left: ${currentTextLeftPos};
         margin-top: ${currentTextTopMargin};
+        right: ${currentTextLeftPos};
       }
       
       .currentSummary {
